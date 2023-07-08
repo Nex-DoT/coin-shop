@@ -1,13 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Belanosima&display=swap');
+
 .inBox{
     position: absolute;
     width: 290px;
+    color: white;
     height: 450px;
-    background:linear-gradient(#5d5dc5 , #5d5dc58c ,  #0000ff00 ) ;
+    background:linear-gradient(#3b3b93 , #5d5dc58c ,  #5353e3a6 ) ;
     top: 50%;
     left: 50px;
-    transform: translateY(-50%);
+    transform: translateY(-50%) skewY(10deg);
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     flex-flow: column;
+    border-radius: 20px;
+    font-family: 'Belanosima', sans-serif;
 }
