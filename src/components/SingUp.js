@@ -1,4 +1,6 @@
 import React,{useState , useEffect} from 'react';
+//Link
+import { Link } from 'react-router-dom';
 //style
 import style from "../styles/Singup.module.css"
 const SingUp = () => {
@@ -39,7 +41,7 @@ const cheangeHandeler = event=>{
                 <input type="checkbox" />
             </div>
             <div className={style.btn}> 
-               <button>Login</button>
+               <Link className={style.Link} to={"/login"}>Login</Link>
                <button>SignUp</button>
             </div>
         </form>

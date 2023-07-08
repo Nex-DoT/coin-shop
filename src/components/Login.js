@@ -1,5 +1,8 @@
-import React from 'react';
-
+import React,{useState} from 'react';
+//style
+import style from "../styles/Login.module.css"
+//Link
+import { Link } from 'react-router-dom';
 const Login = () => {
     const [data , setData] = useState({
         email: "" ,
@@ -10,8 +13,8 @@ const cheangeHandeler = event=>{
 }
     return (
         <>
-                    <form>
-        <h2>Sign-Up</h2>
+              <form className={style.form}>
+        <h2>Login</h2>
             <div>
 
                 <div className={style.email}>
@@ -26,7 +29,7 @@ const cheangeHandeler = event=>{
             </div>
 
             <div className={style.btn}> 
-               <button>SignUp</button>
+               <Link className={style.Link} to={"/signUp"}>SignUp</Link>
                <button>Login</button>
             </div>
         </form>

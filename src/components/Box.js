@@ -13,7 +13,7 @@ const Box = () => {
             <BackGround/>
             <div className={style.inBox}>
                 <Routes>
-                    <Route path='/singUp' element={<SingUp/>}/>
+                    <Route path='/signUp' element={<SingUp/>}/>
                     <Route path='/login' element={<Login/>}/>
                     <Route path='/' element={<Navigate to='/singUp'/>}/>
                 </Routes>
