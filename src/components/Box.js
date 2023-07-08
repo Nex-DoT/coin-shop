@@ -1,11 +1,12 @@
 import React from 'react';
 import { Route , Routes , Navigate } from 'react-router-dom';
 //component
-import SingUp from './SingUp';
+import SingUp from './SignUp';
 import Login from './Login';
 import BackGround from './BackGround';
 //style
 import style from "../styles/Box.module.css";
+import SignUp from './SignUp';
 
 const Box = () => {
     return (
@@ -13,9 +14,9 @@ const Box = () => {
             <BackGround/>
             <div className={style.inBox}>
                 <Routes>
-                    <Route path='/signUp' element={<SingUp/>}/>
+                    <Route path='/signUp' element={<SignUp/>}/>
                     <Route path='/login' element={<Login/>}/>
-                    <Route path='/' element={<Navigate to='/singUp'/>}/>
+                    <Route path='/' element={<Navigate to='/signUp'/>}/>
                 </Routes>
             </div>
         </div>

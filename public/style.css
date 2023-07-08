@@ -5,7 +5,9 @@
     url('./fonts/vazir.woff') format('woff'),
     url('./fonts/vazir.woff2') format('woff2');
 }
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 *{
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
     /* font-family: 'Barlow Semi Condensed', sans-serif; */

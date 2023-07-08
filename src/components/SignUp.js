@@ -2,8 +2,8 @@ import React,{useState , useEffect} from 'react';
 //Link
 import { Link } from 'react-router-dom';
 //style
-import style from "../styles/Singup.module.css"
-const SingUp = () => {
+import style from "../styles/SignUp.module.css"
+const SignUp = () => {
     const [data , setData] = useState({
         username: "" ,
         email: "" ,
@@ -49,4 +49,4 @@ const cheangeHandeler = event=>{
     );
 };
 
-export default SingUp;
+export default SignUp;
