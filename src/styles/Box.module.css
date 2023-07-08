@@ -1,0 +1,13 @@
+.inBox{
+    position: absolute;
+    width: 290px;
+    height: 450px;
+    background:linear-gradient(#5d5dc5 , #5d5dc58c ,  #0000ff00 ) ;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-flow: column;
+}
