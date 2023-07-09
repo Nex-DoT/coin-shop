@@ -14,9 +14,12 @@ const SignUp = () => {
 const cheangeHandeler = event=>{
     setData({...data , [event.target.name] : event.target.value})
 }
+const submitHandeler =event =>{
+    event.pereventDefault()
+}
     return (
         <>
-        <form>
+        <form onSubmit={submitHandeler}>
         <h2>Sign-Up</h2>
             <div>
                 <div className={style.user}>
