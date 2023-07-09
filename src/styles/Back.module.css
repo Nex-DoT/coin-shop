@@ -16,6 +16,12 @@
     transform: skewY(20deg) skewX(20deg);
     background-color: #bd35ee2c;
     border-radius: 30px;
+    animation: span1 8s infinite ;
+}
+@keyframes span1 {
+    0%{      left: -55%;top: -140px;}
+    50%{     left: -50%; top: -130px;}
+    100%{    left: -55%;top: -140px;}
 }
 .span2{
     position: absolute;
@@ -27,4 +33,11 @@
     transform: skewY(15deg) skewX(5deg);
     background-color: #43278567;
     border-radius: 20px;
+    animation: span2 7s  infinite ;
+
+}
+@keyframes span2 {
+    0%{      left: -60%;top: -140px;}
+    50%{     left: -55%; top: -135px;}
+    100%{    left: -60%;top: -140px;}
 }

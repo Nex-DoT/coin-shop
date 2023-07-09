@@ -9,22 +9,22 @@ export const valid = (data , loSi) => {
 // signUp validetion
 
 if(loSi=== "signUp"){
-        //Username
-        if(!data.userName){
-            errors.userName= "UserName fild is empthy"
-        }else if(! userNameRegex.test(data.userName)){
-            errors.userName= "Username is not vaild"
-        }else{
-            delete errors.userName
-        }
-        //confirm Password
-        if(!data.cPassword){
-            errors.cPassword="Confirm Password Fild is empthy"
-        }else if(data.cPassword !== data.password){
-            errors.cPassword = "password confirmation does not match."
-        }else{
-            delete errors.cPassword
-        }
+    //confirm Password
+    if(!data.cPassword){
+        errors.cPassword="Confirm Password Fild is empthy"
+    }else if(data.cPassword !== data.password){
+        errors.cPassword = "password confirmation does not match."
+    }else{
+        delete errors.cPassword
+    }
+    //Username
+    if(!data.userName){
+        errors.userName= "UserName fild is empthy"
+    }else if(! userNameRegex.test(data.userName)){
+        errors.userName= "Username is not vaild"
+    }else{
+        delete errors.userName
+    }
     }
 // Login & signup validation
 
@@ -40,7 +40,7 @@ if(loSi=== "signUp"){
     if(!data.password){
         errors.password = "Password fild is empthy"
     }else if(! passwordRegex.test(data.password)){
-        errors.password= "Password is requred atlest 1number and 1special carecter"
+        errors.password= "atlest 1number and 1special carecter"
     }else{
         delete errors.password;
     }

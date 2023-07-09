@@ -5,7 +5,7 @@
     width: 290px;
     color: white;
     height: 500px;
-    background:linear-gradient(#3b3b93 , #5d5dc58c ,  #5353e3a6 ) ;
+    background:linear-gradient(#3b3b9395 , #5d5dc58c ,  #5353e3a6 ) ;
     top: 50%;
     left: 50px;
     transform: translateY(-50%) skewY(10deg);

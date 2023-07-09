@@ -8,8 +8,28 @@
     outline: none;
     padding: 0 10px;
 }
-.user , .email , .pass , .pass{
+.user , .email , .pass {
     margin: 20px 0;
+    position: relative;
+}
+.warning{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 190px;
+    background-color: #ff000053;
+    font-size: 10px;
+    top: 50px;
+    left: 0px;
+    border-radius: 20px 0px 20px 0px;
+    animation: opacity 0.8s ease-in forwards;
+}
+@keyframes opacity {
+    0%{left: -800px; opacity: 0;}
+    80%{left: 5px; opacity: 0.9;}
+    90%{left: -5px; opacity: 0.9;}
+    100%{left: 0px; opacity: 1;}
 }
 .check{
     display: flex;
@@ -22,15 +42,16 @@
     color: white;
 }
 .btn{
-    width: 220px;
-    height: 30px;
+    width: 250px;
+    height: 70px;
     display: flex;
-    align-items: center;
+    align-items: end;
     justify-content: space-between;
+    
 }
 .Link{
     height: 30px;
-    width: 60px;
+    width: 80px;
     background-color: #ae80ef82;
     border: 1px solid white;
     border-radius: 5px;
@@ -50,7 +71,7 @@
 }
 .btn button{
     height: 30px;
-    width: 60px;
+    width: 80px;
     background-color: #ae80ef;
     border: 1px solid white;
     border-radius: 5px;
@@ -65,9 +86,9 @@
 }
 form{
     position: absolute;
-    top: 8px;
+    top: 15px;
     padding: 0 47px;
-    transform: skewY(-10deg) ;
+    transform: skewY(-10deg);
     width: 100%;
     height: 90%;
     display: flex;
