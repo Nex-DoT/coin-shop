@@ -1,4 +1,4 @@
-const valid = (data , loSi) => {
+export const valid = (data , loSi) => {
 //errors string
     const errors = {}
 // regex value
@@ -8,12 +8,12 @@ const valid = (data , loSi) => {
 
 // signUp validetion
 
-    if(loSi=== "signUp"){
+if(loSi=== "signUp"){
         //Username
         if(!data.userName){
-            errors.userName= "Fild is empthy"
-        }else if(!userNameRegex.test(data.userName)){
-            errors.userName= "UserName is not valid";
+            errors.userName= "UserName fild is empthy"
+        }else if(! userNameRegex.test(data.userName)){
+            errors.userName= "Username is not vaild"
         }else{
             delete errors.userName
         }

@@ -3,40 +3,62 @@ import React,{useState , useEffect} from 'react';
 import { Link } from 'react-router-dom';
 //style
 import style from "../styles/SignUp.module.css"
+// validation
+import { valid } from '../functions/validtion';
+
+//signup component
 const SignUp = () => {
+    // Data of input
     const [data , setData] = useState({
-        username: "" ,
+        userName: "" ,
         email: "" ,
         password: "" ,
         cPassword: "" ,
         checkbox:false
     })
-const cheangeHandeler = event=>{
-    setData({...data , [event.target.name] : event.target.value})
+
+    //set data in data State
+    const cheangeHandeler = event=>{
+        setData({...data , [event.target.name] : event.target.value})
+    }
+
+    //errors data string
+    const [error , setError] = useState({});
+
+    //set errors in datastate with useEffect
+    useEffect(()=>{
+        setError(valid(data , "signUp"))
+    },[data])
+
+    // submit form function 
+    const submitHandeler =event =>{
+        event.pereventDefault()
 }
-const submitHandeler =event =>{
-    event.pereventDefault()
-}
+    //jsx
     return (
         <>
         <form onSubmit={submitHandeler}>
-        <h2>Sign-Up</h2>
+        <h1>Sign-Up</h1>
             <div>
                 <div className={style.user}>
-                    <h6>Username</h6>
-                    <input type="text" name="username" value={data.username} onChange={cheangeHandeler}/>
+                    <h5>Username</h5>
+                    <input type="text" name="userName" value={data.userName} onChange={cheangeHandeler}/>
+                    <h6>{error.userName}</h6>
                 </div>
                 <div className={style.email}>
-                    <h6>Email</h6>
+                    <h5>Email</h5>
                     <input type="email" name="email" value={data.email} onChange={cheangeHandeler}/>
+                    <h6>{error.email}</h6>
                 </div>
                 <div className={style.pass}>
-                    <h6>Password</h6>
+                    <h5>Password</h5>
                     <input type="password" name="password" value={data.password} onChange={cheangeHandeler}/>
+                    <h6>{error.password}</h6>
                 </div>
                 <div className={style.pass}>
-                    <h6>Confirm Password</h6>
+                    <h5>Confirm Password</h5>
                     <input type="password" name="cPassword"  value={data.cPassword} onChange={cheangeHandeler}/>
+                    <h6>{error.cPassword}</h6>
                 </div>
             </div>
             <div className={style.check}>
