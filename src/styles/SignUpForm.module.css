@@ -1,3 +1,32 @@
+form{
+    position: absolute;
+    top: 15px;
+    padding: 0 47px;
+    transform: skewY(-10deg);
+    width: 100%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: column;
+}
+.inBox{
+    position: absolute;
+    width: 290px;
+    color: white;
+    height: 500px;
+    background:linear-gradient(#3b3b9395 , #5d5dc58c ,  #5353e3a6 ) ;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%) skewY(10deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    border-radius: 20px;
+    font-family: 'Belanosima', sans-serif;
+}
+
 .user input , .email input , .pass input{
     background-color: #00ffff00;
     border: 1px solid #ffffffa5;
@@ -83,16 +112,4 @@
 .btn button:hover{
     scale: 1;
     background-color: green;
-}
-form{
-    position: absolute;
-    top: 15px;
-    padding: 0 47px;
-    transform: skewY(-10deg);
-    width: 100%;
-    height: 90%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-flow: column;
 }

@@ -19,9 +19,9 @@
     animation: span1 8s infinite ;
 }
 @keyframes span1 {
-    0%{      left: -55%;top: -140px;}
-    50%{     left: -50%; top: -130px;}
-    100%{    left: -55%;top: -140px;}
+    0%{left: -55%;top: -140px;}
+    50%{left: -50%; top: -130px;}
+    100%{left: -55%;top: -140px;}
 }
 .span2{
     position: absolute;

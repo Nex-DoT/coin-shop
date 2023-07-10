@@ -12,7 +12,7 @@ const Box = () => {
     return (
         <div>
             <BackGround/>
-            <div className={style.inBox}>
+            <div className={style.component}>
                 <Routes>
                     <Route path='/signUp' element={<SignUp/>}/>
                     <Route path='/login' element={<Login/>}/>
