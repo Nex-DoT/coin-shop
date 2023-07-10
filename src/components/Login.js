@@ -4,7 +4,7 @@ import LoginFrom from './LoginFrom';
 const Login = () => {
     return (
         <div>
-        <LoginFrom/>
+           <LoginFrom/>
         </div>
     );
 };

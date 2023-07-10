@@ -6,12 +6,15 @@ import Login from './Login';
 import BackGround from './BackGround';
 //style
 import style from "../styles/Box.module.css";
+//component
 import SignUp from './SignUp';
+import Menu from './Menu';
 
 const Box = () => {
     return (
         <div>
             <BackGround/>
+            <Menu></Menu>
             <div className={style.component}>
                 <Routes>
                     <Route path='/signUp' element={<SignUp/>}/>
