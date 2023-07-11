@@ -13,13 +13,13 @@ const CoinCart = ({data}) => {
                     </div>
                     <div className={style.value}>
                         <h3>{data.name} </h3>
-                        <h5 className={style.price}>${(+data.price_change_24h).toFixed(5)}</h5>
-                        <Link to={"detail:id"}>Details</Link>
+                        <h5 className={+data.price_change_24h<=0 ? style.red : style.green}>${(+data.price_change_24h).toFixed(5)}</h5>
+                        <Link className={style.Link} to={"detail:id"}>Details</Link>
                     </div> 
                 </div>
                 <div className={style.btn}>
                     <button>-</button>
-                    <p></p>
+                    <p>0</p>
                     <button>+</button>
                 </div>
             </div>
