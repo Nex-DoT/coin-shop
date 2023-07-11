@@ -1,5 +1,6 @@
 .back{
     position: absolute;
+    overflow: hidden;
     background: url(../img/test.jpg) ;
     background-size: cover;
     background-repeat: no-repeat;

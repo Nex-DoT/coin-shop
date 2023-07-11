@@ -9,16 +9,18 @@ import style from "../styles/Box.module.css";
 //component
 import SignUp from './SignUp';
 import Menu from './Menu';
+import Shop from './Shop';
 
 const Box = () => {
     return (
-        <div>
+        <div className={style.overflow}>
             <BackGround/>
             <Menu></Menu>
             <div className={style.component}>
                 <Routes>
                     <Route path='/signUp' element={<SignUp/>}/>
                     <Route path='/login' element={<Login/>}/>
+                    <Route path='/shop' element={<Shop/>}/>
                     <Route path='/' element={<Navigate to='/signUp'/>}/>
                 </Routes>
             </div>

@@ -9,7 +9,7 @@
     background: linear-gradient(90deg ,#3b3b9365 , #5d5dc569 ,  #5353e374) ;
     /* backdrop-filter: blur(4px); */
     /* border-bottom: 4px solid white; */
-    animation: start forwards 2s ;
+    animation: start forwards 2s ;z-index: 11111;
 }
 @keyframes start {
     0%{width: 50px; opacity: 0;}
