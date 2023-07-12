@@ -1,4 +1,4 @@
-import React,{useState , useEffect} from 'react';
+import React,{useState , useEffect ,useContext} from 'react';
 //api
 import { Api } from '../api/coin';
 //component
@@ -7,6 +7,7 @@ import CoinCart from './CoinCart';
 import { BsSearch } from "react-icons/bs";
 //style 
 import style from "../styles/Shop.module.css"
+//context
 const Shop = () => {
     const [data , setData] = useState([]);
     const [input , newInput] = useState("")

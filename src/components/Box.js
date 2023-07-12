@@ -10,6 +10,9 @@ import style from "../styles/Box.module.css";
 import SignUp from './SignUp';
 import Menu from './Menu';
 import Shop from './Shop';
+//context
+//context
+
 
 const Box = () => {
     return (
