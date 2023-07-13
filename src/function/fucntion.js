@@ -3,7 +3,18 @@ export const trueFalse = (state , data)=>{
     return boolean;
 }
 export const productN = (state , data) =>{
-    const index = state.selectedItems.findIndex(item=> item.id === data.id);
-    const number = state.selectedItems[index].quantity;
-    return number;
+    const INDEX = state.selectedItems.findIndex(item => item.id === data.id);
+    if(INDEX === -1){
+        return false
+    }else{
+        return state.selectedItems[INDEX].quantity
+    }
+}
+export const number = (state,data)=>{
+    const newNumber =  state.selectedItems.findIndex(item=> item.id === data.id);
+    if( newNumber === -1 ){
+        return false
+    }else{
+        return state.selectedItems[newNumber].quantity;
+    }
 }
