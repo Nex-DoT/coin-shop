@@ -25,7 +25,7 @@ const Shop = () => {
         <div className={style.box}>
             <div className={style.inputdiv}>
                 <BsSearch className={style.icon}/>
-              <input className={style.input} type="text" onKeyUp={keyUpHandeler} />
+              <input className={style.input} placeholder='Search' type="text" onKeyUp={keyUpHandeler} />
             </div>
             {newData.map(item => <CoinCart key={item.id} data={item} />)}
         </div>

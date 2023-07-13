@@ -10,6 +10,7 @@ import style from "../styles/Box.module.css";
 import SignUp from './SignUp';
 import Menu from './Menu';
 import Shop from './Shop';
+import Cart from './CART/Cart';
 //context
 //context
 
@@ -21,6 +22,9 @@ const Box = () => {
             <Menu></Menu>
             <div className={style.component}>
                 <Routes>
+                    <Route path='/cart' element={<Cart/>}/>
+                    
+
                     <Route path='/signUp' element={<SignUp/>}/>
                     <Route path='/login' element={<Login/>}/>
                     <Route path='/shop' element={<Shop/>}/>

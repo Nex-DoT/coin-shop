@@ -9,11 +9,15 @@ import { CoinContext } from '../context/ContexttCART';
 import { trueFalse } from '../function/fucntion';
 import { productN } from '../function/fucntion';
 import { number } from '../function/fucntion';
+//icon 
+import { AiOutlineDelete } from "react-icons/ai";
+import { AiOutlineMinus } from "react-icons/ai";
+import { AiOutlinePlus } from "react-icons/ai";
+
 const CoinCart = ({data}) => {
     const [state , dispatch] = useContext(CoinContext)
     return (
         <div className={style.card} >
-            {console.log(state)}
             <div className={style.content}>
                 <div className={style.nameSymbol}>
                     <div className={style.img}>
@@ -26,13 +30,13 @@ const CoinCart = ({data}) => {
                     </div> 
                 </div>
                 <div className={style.btn}>
-                    {productN(state , data) === 1 && <button onClick={()=>dispatch({type:"REMOVE" , payload:data})}>trash</button>}
-                    {productN(state , data) > 1 && <button onClick={()=>dispatch({type:"DECREASE" , payload:data})}>-</button>}
+                    {productN(state , data) === 1 && <button onClick={()=>dispatch({type:"REMOVE" , payload:data})}><AiOutlineDelete/></button>}
+                    {productN(state , data) > 1 && <button onClick={()=>dispatch({type:"DECREASE" , payload:data})}><AiOutlineMinus/></button>}
                     {number(state,data) && <p>{number(state,data)}</p>}
                    {
                      trueFalse(state , data)?
-                     <button onClick={()=>dispatch({type:"INCREASE" , payload:data})}>+</button>:
-                     <button onClick={()=>dispatch({type:"ADD" , payload:data})}>Add to cart</button>
+                     <button onClick={()=>dispatch({type:"INCREASE" , payload:data})}><AiOutlinePlus/></button>:
+                     <button onClick={()=>dispatch({type:"ADD" , payload:data})} className={style.add}>Add to cart</button>
 
                     } 
                 </div>

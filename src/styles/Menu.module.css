@@ -27,9 +27,33 @@
 }
 .menu .ul li{
     /* transform: skew(-50deg); */
+    width: 50px;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.p{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+    background-color: #6666c6;
+    right: 2px;
+    top: 10px;
+    transition: 0.2s all;
+    font-size: 10px;
+    animation: height 0.5s forwards ease;
+    opacity: 0;z-index: 1000;
+}
+@keyframes height {
+    0%{ opacity: 0;}
+    100%{opacity: 1;}
 }
 .icon{
     padding-top: 13px;
@@ -38,7 +62,7 @@
     cursor: pointer;
     transition: 0.4s all;
 }
-.icon:hover , .text:hover{
+.icon:hover , .text:hover , .icon:hover .p{
     scale: 0.85;
     color: black;
 }
