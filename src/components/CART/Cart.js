@@ -1,4 +1,4 @@
-import React,{useContext} from 'react';
+import React,{useContext, useEffect} from 'react';
 //style 
 import style from "../../styles/Cart.module.css";
 //context
@@ -7,8 +7,10 @@ import { CoinContext } from '../../context/ContexttCART';
 import Coin from './Coin';
 
 
+
 const Cart = () => {
     const [state , dispatch] = useContext(CoinContext);
+
     return (
         <div className={style.box}>
           {/* for price , quantity */}

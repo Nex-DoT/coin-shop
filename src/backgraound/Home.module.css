@@ -1,0 +1,44 @@
+.back{
+    position: absolute;
+    overflow: hidden;
+    background: url(../img/test.jpg) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.span1{
+    position: absolute;
+    right: -55%;
+    top: -140px;
+    width: 80%;
+    height: 90%;
+    transform: skewY(20deg) skewX(20deg);
+    background-color: #bd35ee2c;
+    border-radius: 30px;
+    animation: span1 8s infinite ;
+}
+@keyframes span1 {
+    0%{right: -55%;top: -140px;}
+    50%{right: -50%; top: -130px;}
+    100%{right: -55%;top: -140px;}
+}
+.span2{
+    position: absolute;
+    right: -52%;
+    top: -140px;
+    width: 80%;
+    height: 90%;
+    /* transform: skewX(5deg); */
+    transform: skewY(15deg) skewX(5deg);
+    background-color: #43278567;
+    border-radius: 20px;
+    animation: span2 7s  infinite ;
+
+}
+@keyframes span2 {
+    0%{      right: -60%;top: -140px;}
+    50%{     right: -55%; top: -135px;}
+    100%{    right: -60%;top: -140px;}
+}

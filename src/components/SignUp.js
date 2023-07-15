@@ -1,4 +1,4 @@
-import React from 'react';
+import React , {useEffect} from 'react';
 //component 
 import SignUpForm from './SignUpForm';
 //signup component
