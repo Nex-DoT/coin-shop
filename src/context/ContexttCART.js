@@ -47,9 +47,10 @@ const reducerCoin = (state , action)=>{
                 ...sumItem(state.selectedItems),
             }
         case "CLEAR" : 
+            const clear = []
         return{
             selectedItems: [],
-            ...sumItem(state.selectedItems),
+            ...sumItem(clear),
               checkout: false
         }
         case "BUY" : 
