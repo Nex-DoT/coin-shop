@@ -22,7 +22,7 @@ const reducerCoin = (state , action)=>{
                     ...state,
                     selectedItems:[...state.selectedItems],
                     ...sumItem(state.selectedItems),
-
+                       checkout: false
                 }
             }
         case "REMOVE" : 

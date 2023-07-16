@@ -86,3 +86,47 @@ table{
     /* justify-content: space-between; */
     flex-flow: column;
 }
+.boxbuy{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    color: white;
+    z-index: 100;
+}
+.boxbuy h3 {
+    z-index: 200;
+}
+.buyIcon{
+    top: -80px;
+    font-size: 70px;
+    position: absolute;
+    color: #2cdf50aa;
+    z-index: 99;
+}
+.boxicon{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    color: #bd5e5e;
+    z-index: 100;
+}
+.link{
+    color: #0d00ff9f;
+    cursor: pointer;
+    z-index: 100;
+}
+.icon{
+    z-index: 200;
+    top: -80px;
+    font-size: 70px;
+    position: absolute;
+    color: #fa3e3e8d;
+}
