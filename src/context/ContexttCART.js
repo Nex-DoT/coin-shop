@@ -55,8 +55,9 @@ const reducerCoin = (state , action)=>{
         case "BUY" : 
         return {
             selectedItems: [],
-            ...sumItem(state.selectedItems),
-              checkout: true
+            itemsCounter: 0,
+            total: 0,
+            checkout: true
         }
         default: 
         return state

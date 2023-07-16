@@ -35,5 +35,29 @@ tbody tr
     width: 80%;
     height: 80%;
     object-fit: cover;
-
+}
+.div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.div button{
+    width: 25px ;
+    height: 25px;
+    font-size: 18px;
+    cursor: pointer;
+    color: #000000 ;
+    background-color: skyblue;
+    border-radius: 50%;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: none;
+    font-weight: bold;
+}
+.div button:hover{
+    background-color: #4d4dbc;
+    color: white;
 }
