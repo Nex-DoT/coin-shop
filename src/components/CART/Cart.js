@@ -3,12 +3,20 @@ import React,{useContext, useEffect} from 'react';
 import style from "../../styles/Cart.module.css";
 //context
 import { CoinContext } from '../../context/ContexttCART';
+import { backContext } from '../../function/Reducer';
 //component
 import Coin from './Coin';
 
 
-
 const Cart = () => {
+  const [statee , dispatchh] = useContext(backContext);
+    useEffect(()=>{
+      
+      dispatchh({type:"new" , payload:"cart"});
+        console.log(statee);
+      
+      
+    },[])
     const [state , dispatch] = useContext(CoinContext);
 
     return (

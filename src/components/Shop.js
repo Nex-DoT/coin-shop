@@ -1,4 +1,4 @@
-import React,{useState , useEffect } from 'react';
+import React,{useState , useEffect, useContext } from 'react';
 //api
 import { Api } from '../api/coin';
 //component
@@ -8,10 +8,14 @@ import { BsSearch } from "react-icons/bs";
 //style 
 import style from "../styles/Shop.module.css"
 //context
+import { backContext } from '../function/Reducer';
 const Shop = () => {
+    const [statee , dispatchh] = useContext(backContext);
     const [data , setData] = useState([]);
     const [input , newInput] = useState("")
     useEffect(()=>{
+        dispatchh({type:"new" , payload:"shop"});
+        console.log(statee);
         const fetchApi = async()=>{
             setData(await Api());
         }
