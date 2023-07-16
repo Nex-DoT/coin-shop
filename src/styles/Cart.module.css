@@ -16,7 +16,7 @@
     100%{top: 55%; opacity: 1;}
 }
 .box1{
-    width: 400px;
+    width: 300px;
     height: 138px;
     display: flex;
     align-items: start;
@@ -26,6 +26,17 @@
     background-color: #4e4c7c9f;
     border-radius: 20px;
     margin-right: 50px;
+}
+.box3{
+    width: 300px;
+    height: 508px;
+    margin-top: 50px;
+    background-color:#4e4c7c9f ;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-flow: column;
+    border-radius: 20px;
 }
 .box1 h3{
     font-size: 14px;

@@ -1,0 +1,34 @@
+.newdiv{
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+    flex-flow: column;
+    height: 100%;
+}
+.green{
+    color: #19c919;
+}
+.box{
+    width: 100%;
+    background-color: #4e4c7c9f;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.link{
+    color: #8c8cdf;
+    font-size: 12px;
+}
+.box div{
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box div img{
+    width: 95%;
+    height: 95%;
+}
