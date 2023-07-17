@@ -1,6 +1,6 @@
 import React from 'react';
 import style from "./Home.module.css"
-const Home = () => {
+const HomeBack = () => {
     return (
         <div className={style.back}>
             <span className={style.span1}></span>
@@ -9,4 +9,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default HomeBack;
