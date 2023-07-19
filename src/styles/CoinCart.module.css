@@ -1,8 +1,8 @@
 .card{
     position: relative;
-    width: 22%;
+    width: 280px;
     height: 160px;
-    margin: 10px 15px;
+    margin: 10px auto ;
     border-radius: 20px;
     transform: skew(-5deg);
     background: linear-gradient(120deg , #774bc3a9 ,#774bc3b7 , #11be9688 ,#774bc39d);
