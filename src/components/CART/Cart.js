@@ -24,43 +24,39 @@ const Cart = () => {
     const [state , dispatch] = useContext(CoinContext);
 
     return (
-        <div className={style.box}>
-          {/* for price , quantity */}
-              <div>
-                    <div className={style.box1}>  
-                        <div className={style.box2}>
-                          <div>
-                            <p> itemsCounter : {state.itemsCounter}</p>
-                          </div>
-                          <div>
-                            <p>Price of Coins : {state.total}</p>
-                          </div>
-                              <div className={style.btn}>
-                                {state.itemsCounter > 0 && <button onClick={()=>dispatch({type:"CLEAR"})}>Clear Cart</button>}    
-                                {state.itemsCounter > 0 && <button onClick={()=>dispatch({type:"BUY"})}>Buy</button>}
-                                    
-                              </div>
+        <div className={style.box}> 
+                        {/* for price , quantity */}
+                        <div className={style.box1}>
+                            <div>
+                                 <p> itemsCounter : {state.itemsCounter}</p>
+                            </div>
+                            <div>
+                                 <p>Price of Coins : {state.total}</p>
+                            </div>
+                            <div className={style.btn}>
+                                  {state.itemsCounter > 0 ? <button onClick={()=>dispatch({type:"CLEAR"})}>Clear Cart</button> : <button>Clear Cart</button>}    
+                                  {state.itemsCounter > 0 ? <button onClick={()=>dispatch({type:"BUY"})}>Buy</button> : <button>Buy</button>}      
+                            </div>
                         </div> 
-                    </div>
-                      {<div className={style.box3}><PositiveData/></div>}
-              </div>
-          {/* /component of coins */}
-            <div className={style.scroll}>
-              <table>
-                <tbody>
-                  {state.checkout && <div className={style.boxbuy}>
-                                        <BsCheckCircleFill className={style.buyIcon}/>
-                                        <h3>
-                                        Thank you for your purchase!
-                                        </h3> </div>}
-                  {state.itemsCounter===0 && state.checkout===false &&
-                     <div className={style.boxicon}><BsCartXFill className={style.icon}/> <h1>Your Cart Is Empty.</h1><Link className={style.link} to={"/shop"}>SHOP</Link></div>}
-                  {state.itemsCounter>0 &&
-                     state.selectedItems.map(item => <Coin key={item.id} data={item} /> )}
-                </tbody>
-              </table>
 
-            </div>
+
+                            {/* /component of coins */}
+                        <div className={style.scroll}>
+                          <table>
+                            <tbody>
+                              {state.checkout && <div className={style.boxbuy}>
+                                                    <BsCheckCircleFill className={style.buyIcon}/>
+                                                    <h3>
+                                                    Thank you for your purchase!
+                                                    </h3> </div>}
+                              {state.itemsCounter===0 && state.checkout===false &&
+                                <div className={style.boxicon}><BsCartXFill className={style.icon}/> <h1>Your Cart Is Empty.</h1><Link className={style.link} to={"/shop"}>SHOP</Link></div>}
+                              {state.itemsCounter>0 &&
+                                state.selectedItems.map(item => <Coin key={item.id} data={item} /> )}
+                            </tbody>
+                          </table>
+                        </div>
+                      {<div className={style.box3}><PositiveData/></div>}
             
         </div>
     );

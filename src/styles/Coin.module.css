@@ -61,3 +61,8 @@ tbody tr
     background-color: #4d4dbc;
     color: white;
 }
+@media screen and (max-width:1000px){
+    .none{
+        display: none;
+    }
+}

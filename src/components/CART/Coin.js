@@ -18,10 +18,10 @@ const Coin = ({data}) => {
         <tr>
              <td><div className={style.img}><img src={data.image} alt="" /></div></td>
              <td> <p>name <br/>{data.name}</p> </td>
-             <td><p>symbol <br/>{data.symbol}</p></td>
+             <td className={style.none}><p>symbol <br/>{data.symbol}</p></td>
              <td><p>Price <br/> {data.current_price}</p></td>
-             <td><p>changePercentage {data.price_change_percentage_24h}%</p></td>
-             <td><p>capChange {data.market_cap_change_24h.toFixed()}</p></td>
+             <td className={style.none}><p>changePercentage {data.price_change_percentage_24h}%</p></td>
+             <td className={style.none}><p>capChange {data.market_cap_change_24h.toFixed()}</p></td>
              <td><div className={style.div}>
                   {productN(state , data) === 1 && <button onClick={()=>dispatch({type:"REMOVE" , payload:data})}><AiOutlineDelete/></button>}
                   {productN(state , data) > 1 && <button onClick={()=>dispatch({type:"DECREASE" , payload:data})}><AiOutlineMinus/></button>}
