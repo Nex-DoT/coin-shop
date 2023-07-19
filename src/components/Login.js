@@ -3,6 +3,8 @@ import React,{useEffect,useContext} from 'react';
 import LoginFrom from './LoginFrom';
 //context
 import { backContext } from '../function/Reducer';
+//style
+import style from "../styles/Login.module.css"
 const Login = () => {
     const [statee , dispatchh] = useContext(backContext);
     const actionname = {
@@ -13,7 +15,7 @@ const Login = () => {
         console.log(statee);
     },[])
     return (
-        <div>
+        <div className={style.newBox}>
            <LoginFrom/>
         </div>
     );

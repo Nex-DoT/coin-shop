@@ -113,3 +113,10 @@
     scale: 1;
     background-color: green;
 }
+@media screen and (max-width:450px){
+    .inBox{
+        left: 50%;
+        top: 58%;
+        transform: translateY(-50%) translateX(-50%) skewY(10deg);    
+    }
+}

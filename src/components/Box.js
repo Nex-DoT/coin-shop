@@ -33,7 +33,7 @@ const Box = () => {
                     <Route path='/signUp' element={<SignUp/>}/>
                     <Route path='/login' element={<Login/>}/>
                     <Route path='/shop' element={<Shop/>}/>
-                    <Route path='/' element={<Navigate to='/signUp'/>}/>
+                    <Route path='/' element={<Navigate to='/home'/>}/>
                 </Routes>
             </div>
         </div>
