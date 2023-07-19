@@ -198,4 +198,8 @@ p{
     .divhumber{
         display: flex;
     }
+    .p{
+        top: 210px;
+        left: 57px;
+    }
 }
