@@ -50,10 +50,10 @@
 .box3{
     position: absolute;
     top: 50%;
-    left: 2.7%;
+    left: 1.5%;
     transform: translateY(-50%) ;
     width: 300px;
-    height: 508px;
+    height: 428px;
     margin-top: 50px;
     background-color:#4e4c7c6f ;
     display: flex;
