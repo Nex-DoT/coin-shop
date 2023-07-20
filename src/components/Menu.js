@@ -37,7 +37,8 @@ const Menu = () => {
                  </li>
                  <li>
                      {state.itemsCounter > 0 && <p className={style.p}>{state.itemsCounter}</p>}
-                     <Link className={style.icon} to={"/cart"}> <BsCartFill/> <h5>Cart</h5> </Link>
+                     {state.itemsCounter === 0 ? <div className={style.icon1}><BsCartFill /> <h5>Cart</h5></div> : <Link className={style.icon} to={"/cart"}> <BsCartFill/> <h5>Cart</h5> </Link> } 
+                     
                  </li>
                  <li>
                      <Link className={style.text} to={"/signUp"}>SignUP</Link><p>/</p><Link className={style.text}to={"/login"}>Login</Link>
@@ -57,7 +58,8 @@ const Menu = () => {
                 </li>
                 <li>
                     {state.itemsCounter > 0 && <p className={style.p}>{state.itemsCounter}</p>}
-                    <Link className={style.icon} to={"/cart"}> <BsCartFill/> </Link>
+                    {state.itemsCounter === 0 ? <div className={style.icon1}> <BsCartFill/></div> : <Link className={style.icon} to={"/cart"}> <BsCartFill/> </Link>}
+                    
                 </li>
                 <li>
                     <Link className={style.text} to={"/signUp"}>SignUP</Link><p>/</p><Link className={style.text}to={"/login"}>Login</Link>
