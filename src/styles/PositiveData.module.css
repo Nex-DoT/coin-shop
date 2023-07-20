@@ -1,38 +1,65 @@
-.newdiv{
+.newDiv{
+    /* position: absolute; */
     display: flex;
-    align-items: start;
+    align-items: center;
     justify-content: space-around;
     flex-flow: column;
     height: 100%;
+    width: 300px;
 }
 .green{
     color: #19c919;
 }
-.box{
-    width: 100%;
+.box10{
+    /* position: absolute; */
+    width: 250px;
     background-color: #4e4c7c9f;
     padding: 10px 20px;
     border-radius: 5px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: start;
+}
+.details{
+    
 }
 .link{
     color: #8c8cdf;
     font-size: 12px;
     padding-left: 10px;
 }
-.box .div{
-    width: 50px;
-    height: 50px;
-    overflow: hidden;
-    border-radius: 50%;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.box10 .img2{
+   width: 60px;
+   height: 60px;
+   overflow: hidden;
+   border-radius: 50%;
+   background-color: white;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
-.box .div img{
-    width: 95%;
-    height: 95%;
+.box10 .img2 .img3{
+    width: 45px;
+    height: 45px;
+
+}
+@media screen and (max-width:1500px){
+    .newDiv{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-flow: row;
+        height: 100%;
+        width: 100%;
+    }
+    .box10{
+        /* position: absolute; */
+        width: 200px;
+        background-color: #4e4c7c9f;
+        padding: 10px 20px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 }
