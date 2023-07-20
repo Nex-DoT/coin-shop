@@ -56,7 +56,7 @@ const Cart = () => {
                             </tbody>
                           </table>
                         </div>
-                      {<div className={style.box3}><PositiveData/></div>}
+                      {<div className={style.box3}> <p>Discover our top picks just for you!</p><PositiveData/></div>}
             
         </div>
     );
