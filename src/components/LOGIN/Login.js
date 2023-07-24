@@ -2,9 +2,9 @@ import React,{useEffect,useContext} from 'react';
 //component
 import LoginFrom from './LoginFrom';
 //context
-import { backContext } from '../function/Reducer';
+import { backContext } from '../../context/Reducer';
 //style
-import style from "../styles/Login.module.css"
+import style from "../../styles/Login.module.css"
 const Login = () => {
     const [statee , dispatchh] = useContext(backContext);
     const actionname = {

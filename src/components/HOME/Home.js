@@ -1,5 +1,5 @@
 import React,{useEffect , useContext} from 'react';
-import { backContext } from '../../function/Reducer';
+import { backContext } from '../../context/Reducer';
 //icon
 import { BsGithub } from "react-icons/bs";
 import { BsTelegram } from "react-icons/bs";

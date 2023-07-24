@@ -1,8 +1,8 @@
 import React , {useContext} from 'react';
 import { Link } from 'react-router-dom';
-import { positiveContext } from '../context/PositiveItems';
+import { positiveContext } from '../../context/PositiveItems';
 //style
-import style from "../styles/PositiveData.module.css"
+import style from "../../styles/PositiveData.module.css"
 const PositiveData = () => {
   const [newpositiveData] =useContext(positiveContext);
     return (

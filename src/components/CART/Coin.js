@@ -4,9 +4,9 @@ import { CoinContext } from '../../context/ContexttCART';
 //style
 import style from "../../styles/Coin.module.css";
 //function
-import { trueFalse } from '../../function/fucntion';
-import { productN } from '../../function/fucntion';
-import { number } from '../../function/fucntion';
+import { trueFalse } from '../../functions/fucntion';
+import { productN } from '../../functions/fucntion';
+import { number } from '../../functions/fucntion';
 //icon 
 import { AiOutlineDelete } from "react-icons/ai";
 import { AiOutlineMinus } from "react-icons/ai";

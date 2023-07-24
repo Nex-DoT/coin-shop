@@ -2,19 +2,16 @@ import React,{useState , useEffect} from 'react';
 //Link
 import { Link } from 'react-router-dom';
 //style
-import style from "../styles/SignUpForm.module.css"
+import style from "../../styles/LoginForm.module.css"
 // validation
-import { valid } from '../functions/validtion';
+import { valid } from '../../functions/validtion';
 
-const SignUpForm = () => {
+const LoginFrom = () => {
 
     // Data of input
     const [data , setData] = useState({
-        userName: "" ,
         email: "" ,
         password: "" ,
-        cPassword: "" ,
-        checkbox:false
     })
 
     //set data in data State
@@ -30,7 +27,7 @@ const SignUpForm = () => {
 
     //set errors in datastate with useEffect
     useEffect(()=>{
-        setError(valid(data , "signUp"))
+        setError(valid(data))
     },[data , focus ])
 
     // submit form function 
@@ -40,10 +37,8 @@ const SignUpForm = () => {
 
         }else{
             setFocus({
-                userName: true ,
                 email: true ,
                 password: true ,
-                cPassword: true ,
             })
         }
 }
@@ -52,17 +47,11 @@ const SignUpForm = () => {
     const focusHandeler = event =>{
         setFocus({...focus , [event.target.name] : true })
     }
-    //jsx
     return (
         <div className={style.inBox}>
-        <form onSubmit={submitHandeler}>
-        <h1>Sign-Up</h1>
+         <form className={style.form} onSubmit={submitHandeler}>
+        <h1>Login</h1>
             <div>
-                <div className={style.user}>
-                    <h5>Username</h5>
-                    <input type="text" name="userName" onFocus={focusHandeler} value={data.userName} onChange={cheangeHandeler}/>
-                    {error.userName && focus.userName && <h6 className={style.warning}>{error.userName}</h6>}     
-                </div>
                 <div className={style.email}>
                     <h5>Email</h5>
                     <input type="email" name="email" onFocus={focusHandeler} value={data.email} onChange={cheangeHandeler}/>
@@ -73,23 +62,14 @@ const SignUpForm = () => {
                     <input type="password" name="password" onFocus={focusHandeler} value={data.password} onChange={cheangeHandeler}/>
                     {error.password && focus.password && <h6 className={style.warning}>{error.password}</h6>}     
                 </div>
-                <div className={style.pass}>
-                    <h5>Confirm Password</h5>
-                    <input type="password" name="cPassword" onFocus={focusHandeler}  value={data.cPassword} onChange={cheangeHandeler}/>
-                    {error.cPassword && focus.cPassword && <h6 className={style.warning}>{error.cPassword}</h6>}
-                </div>
-            </div>
-            <div className={style.check}>
-                <a href="#">I agree to the terms and conditions.</a>
-                <input type="checkbox" />
             </div>
             <div className={style.btn}> 
-               <Link className={style.Link} to={"/login"}>Login</Link>
-               <button>SignUp</button>
+               <Link className={style.Link} to={"/signUp"}>SignUp</Link>
+               <button>Login</button>
             </div>
         </form>
         </div>
     );
 };
 
-export default SignUpForm;
+export default LoginFrom;

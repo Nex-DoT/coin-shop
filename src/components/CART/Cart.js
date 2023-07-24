@@ -3,10 +3,10 @@ import React,{useContext, useEffect } from 'react';
 import style from "../../styles/Cart.module.css";
 //context
 import { CoinContext } from '../../context/ContexttCART';
-import { backContext } from '../../function/Reducer';
+import { backContext } from '../../context/Reducer';
 //component
 import Coin from './Coin';
-import PositiveData from '../PositiveData';
+import PositiveData from './PositiveData';
 //icon
 import { BsCartXFill } from "react-icons/bs";
 import { BsCheckCircleFill } from "react-icons/bs";

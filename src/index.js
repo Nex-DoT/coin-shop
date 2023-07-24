@@ -1,20 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+//style
 import './index.css';
-import ContexttCART from './context/ContexttCART';
-import Reducer from './function/Reducer';
-import PositiveItems from './context/PositiveItems';
-import App from './App';
+//router
 import { BrowserRouter } from 'react-router-dom';
+//context
+import ContexttCART from './context/ContexttCART';
+import DataCoinApi from './context/DataCoinApi';
+import Reducer from './context/Reducer';
+import App from './App';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+
 root.render(
   <BrowserRouter>
-     <PositiveItems>
-      <Reducer>
-          <ContexttCART>
-              <App />
-          </ContexttCART>
-      </Reducer>
-     </PositiveItems>
+      <DataCoinApi>
+          <Reducer>
+              <ContexttCART>
+                   <App />
+              </ContexttCART>
+          </Reducer>
+      </DataCoinApi>
   </BrowserRouter>
 );

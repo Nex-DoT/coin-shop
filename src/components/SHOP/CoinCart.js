@@ -2,13 +2,13 @@ import React,{useContext}  from 'react';
 // Link
 import { Link } from 'react-router-dom';
 //style
-import style from "../styles/CoinCart.module.css"
+import style from "../../styles/CoinCart.module.css"
 //context
-import { CoinContext } from '../context/ContexttCART';
+import { CoinContext } from '../../context/ContexttCART';
 //function
-import { trueFalse } from '../function/fucntion';
-import { productN } from '../function/fucntion';
-import { number } from '../function/fucntion';
+import { trueFalse } from '../../functions/fucntion';
+import { productN } from '../../functions/fucntion';
+import { number } from '../../functions/fucntion';
 //icon 
 import { AiOutlineDelete } from "react-icons/ai";
 import { AiOutlineMinus } from "react-icons/ai";

@@ -1,14 +1,14 @@
 import React,{useState , useEffect, useContext } from 'react';
 //api
-import { Api } from '../api/coin';
+import { Api } from '../../api/coin';
 //component
 import CoinCart from './CoinCart';
 //icon 
 import { BsSearch } from "react-icons/bs";
 //style 
-import style from "../styles/Shop.module.css"
+import style from "../../styles/Shop.module.css"
 //context
-import { backContext } from '../function/Reducer';
+import { backContext } from '../../context/Reducer';
 const Shop = () => {
     const [statee , dispatchh] = useContext(backContext);
     const [data , setData] = useState([]);

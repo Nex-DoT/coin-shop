@@ -2,9 +2,9 @@ import React , {useEffect,useContext} from 'react';
 //component 
 import SignUpForm from './SignUpForm';
 //style
-import style from "../styles/SingUp.module.css"
+import style from "../../styles/SingUp.module.css"
 //context
-import { backContext } from '../function/Reducer';
+import { backContext } from '../../context/Reducer';
 //signup component
 const SignUp = () => {
     const [statee , dispatchh] = useContext(backContext);
