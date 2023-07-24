@@ -1,13 +1,13 @@
 import React , {useContext} from 'react';
 import { Link } from 'react-router-dom';
-import { positiveContext } from '../../context/PositiveItems';
+import { DataContext } from '../../context/DataCoinApi';
 //style
 import style from "../../styles/PositiveData.module.css"
 const PositiveData = () => {
-  const [newpositiveData] =useContext(positiveContext);
+  const [data,positive] =useContext(DataContext);
     return (
         <div className={style.newDiv}>
-            {newpositiveData.map(item=> <div className={style.box10} key={item.id}>
+            {positive.map(item=> <div className={style.box10} key={item.id}>
                                             <div className={style.img2}><img className={style.img3} src={item.image} alt="" /></div>
                                             <div className={style.details}>
                                                 <p>{item.name}</p>
