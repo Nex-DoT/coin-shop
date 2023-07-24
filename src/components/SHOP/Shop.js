@@ -1,6 +1,4 @@
 import React,{useState , useEffect, useContext } from 'react';
-//api
-import { Api } from '../../api/coin';
 //component
 import CoinCart from './CoinCart';
 //icon 
@@ -9,22 +7,19 @@ import { BsSearch } from "react-icons/bs";
 import style from "../../styles/Shop.module.css"
 //context
 import { backContext } from '../../context/Reducer';
+import { DataContext } from '../../context/DataCoinApi';
+
+//SHOP component
 const Shop = () => {
+    //state
+    const [input , newInput] = useState("");
+    //context
     const [statee , dispatchh] = useContext(backContext);
-    const [data , setData] = useState([]);
-    const [input , newInput] = useState("")
-    useEffect(()=>{
-        dispatchh({type:"new" , payload:"shop"});
-        console.log(statee);
-        const fetchApi = async()=>{
-            setData(await Api());
-        }
-        fetchApi()
-    },[input])
+    const [data] = useContext(DataContext)
     const keyUpHandeler = event => {
         newInput(event.target.value);
     }
-    const newData = data.filter(item=> item.name.toLowerCase().includes(input.toLowerCase()))
+    const newData = data.filter(item=> item.name.toLowerCase().includes(input.toLowerCase()));
     return (
         <div className={style.box}>
             <div className={style.inputdiv}>
@@ -36,4 +31,4 @@ const Shop = () => {
     );
 };
 
-export default Shop;
+export default React.memo(Shop);
