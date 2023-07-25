@@ -21,10 +21,10 @@ const App = () => {
     const [statee , dispatchh ] = useContext(backContext)
     return (
         <div className={style.overflow}>
-            {statee.loginSignup && <BackGround/>}
+            {/* {statee.loginSignup && <BackGround/>}
             {statee.cart && <HomeBack/>}
             {statee.shop && <Shop2Back/>}
-            {statee.home && <ShopBack/>}
+            {statee.home && <ShopBack/>} */}
             <Menu></Menu>
             <div className={style.component}>
               <Suspense fallback={<div>Loading</div>}>

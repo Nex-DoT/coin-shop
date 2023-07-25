@@ -8,7 +8,9 @@ import { BrowserRouter } from 'react-router-dom';
 import ContexttCART from './context/ContexttCART';
 import DataCoinApi from './context/DataCoinApi';
 import Reducer from './context/Reducer';
+import DataSlicer from './context/DataSlicer';
 import App from './App';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -18,7 +20,9 @@ root.render(
       <DataCoinApi>
           <Reducer>
               <ContexttCART>
-                   <App />
+                 <DataSlicer>
+                     <App />
+                 </DataSlicer>
               </ContexttCART>
           </Reducer>
       </DataCoinApi>

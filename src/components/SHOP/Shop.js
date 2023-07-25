@@ -1,4 +1,4 @@
-import React,{useState , useEffect, useContext } from 'react';
+import React,{useState , useEffect, useContext ,useTransition } from 'react';
 //component
 import CoinCart from './CoinCart';
 //icon 
@@ -15,7 +15,7 @@ const Shop = () => {
     const [input , newInput] = useState("");
     //context
     const [statee , dispatchh] = useContext(backContext);
-    const [data,positive] = useContext(DataContext)
+    const [data,positive] = useContext(DataContext);
     const keyUpHandeler = event => {
         newInput(event.target.value);
     }
