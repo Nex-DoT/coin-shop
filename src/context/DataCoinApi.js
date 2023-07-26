@@ -1,20 +1,22 @@
-import React,{useState , useEffect , createContext , useTransition} from 'react';
+import React,{useState , useEffect , createContext } from 'react';
 import { Api } from '../api/coin';
 export const DataContext = createContext();
 const DataCoinApi = ({children}) => {
-    const [isPranding , startTransition] = useTransition();
-    const [data , setData] = useState([]);
-    const [positive , setPositive] = useState([]);
+    const [data , setData] = useState([])
+
     useEffect(()=>{
         const fetchApi = async ()=>{
-            setData(await Api())
+            setData( await Api())
         }
         fetchApi()
-        startTransition(()=>{
-            setPositive(data.filter( item=> item.price_change_percentage_24h > 0 ));
-            console.log(positive);
-        },[])
     },[])
+    const newDataP = data.filter(item => item.price_change_percentage_24h > 0 );
+       const positive = [
+            newDataP[0],
+            newDataP[1],
+            newDataP[2]
+        ];
+        
     return (
         <DataContext.Provider value={[data , positive]}>
             {children}
@@ -22,4 +24,4 @@ const DataCoinApi = ({children}) => {
     );
 };
 
-export default React.memo(DataCoinApi);
+export default DataCoinApi;

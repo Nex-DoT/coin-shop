@@ -8,6 +8,8 @@ import { BsHouseDoorFill } from "react-icons/bs";
 import { BsCurrencyBitcoin } from "react-icons/bs";
 import { BsCartFill } from "react-icons/bs";
 import { AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineClose } from "react-icons/ai";
+
 //context
 import { CoinContext } from '../context/ContexttCART';
 //Menu  component
@@ -24,21 +26,20 @@ const Menu = () => {
     return (
         <div>
             <div className={menu ? style.divhumber2 : style.divhumber}>
-                <AiOutlineMenu onClick={offOnMenu}  className={style.humber}/>
+                {menu ? <AiOutlineClose onClick={offOnMenu}  className={style.humber}/> :<AiOutlineMenu onClick={offOnMenu}  className={style.humber}/>}
             </div>
             
              <div className={menu ? style.newmenu2 :style.newmenu}>
              <ul className={style.ul}>
                  <li>
-                     <Link className={style.icon} to={"/home"}> <BsHouseDoorFill/> <h5>Home</h5></Link>
+                     <Link className={style.icon} to={"/home"}> <h5>Home</h5></Link>
                  </li>
                  <li>
-                     <Link className={style.icon} to={"/shop"}> <BsCurrencyBitcoin/> <h5>Shop</h5></Link>
+                     <Link className={style.icon} to={"/shop"}> <h5>Shop</h5></Link>
                  </li>
                  <li>
                      {state.itemsCounter > 0 && <p className={style.p}>{state.itemsCounter}</p>}
-                     {state.itemsCounter === 0 ? <div className={style.icon1}><BsCartFill /> <h5>Cart</h5></div> : <Link className={style.icon} to={"/cart"}> <BsCartFill/> <h5>Cart</h5> </Link> } 
-                     
+                     {state.itemsCounter === 0 ? <div className={style.icon1}> <h5>Cart</h5></div> : <Link className={style.icon} to={"/cart"}>  <h5>Cart</h5> </Link> }             
                  </li>
                  <li>
                      <Link className={style.text} to={"/signUp"}>SignUP</Link><p>/</p><Link className={style.text}to={"/login"}>Login</Link>

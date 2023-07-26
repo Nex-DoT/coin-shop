@@ -15,13 +15,14 @@ const Shop = () => {
     const [input , newInput] = useState("");
     //context
     const [statee , dispatchh] = useContext(backContext);
-    const [data] = useContext(DataContext)
+    const [data,positive] = useContext(DataContext)
     const keyUpHandeler = event => {
         newInput(event.target.value);
     }
     const newData = data.filter(item=> item.name.toLowerCase().includes(input.toLowerCase()));
     return (
         <div className={style.box}>
+            {console.log(positive , data)}
             <div className={style.inputdiv}>
                 <BsSearch className={style.icon}/>
               <input className={style.input} placeholder='Search' type="text" onKeyUp={keyUpHandeler} />
