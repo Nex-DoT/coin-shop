@@ -1,4 +1,4 @@
-import React,{useState , useEffect, useContext } from 'react';
+import React,{useState , useEffect, useContext ,useTransition } from 'react';
 //component
 import CoinCart from './CoinCart';
 //icon 
@@ -20,6 +20,9 @@ const Shop = () => {
         newInput(event.target.value);
     }
     const newData = data.filter(item=> item.name.toLowerCase().includes(input.toLowerCase()));
+    useEffect(()=>{
+        dispatchh({type:"new" , payload:"shop"});
+    },[])
     return (
         <div className={style.box}>
             {console.log(positive , data)}

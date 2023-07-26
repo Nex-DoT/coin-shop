@@ -5,6 +5,7 @@ import BackGround from './backgraound/BackGround';
 import HomeBack from './backgraound/HomeBack';
 import Shop2Back from "./backgraound/Shop2Back";
 import ShopBack from "./backgraound/ShopBack";
+import PhoneBack from './backgraound/PhoneBack';
 //context
 import { backContext } from './context/Reducer';
 //style
@@ -25,6 +26,7 @@ const App = () => {
             {statee.cart && <HomeBack/>}
             {statee.shop && <Shop2Back/>}
             {statee.home && <ShopBack/>}
+            {statee.PhoneBack && <PhoneBack/>}
             <Menu></Menu>
             <div className={style.component}>
               <Suspense fallback={<div>Loading</div>}>
