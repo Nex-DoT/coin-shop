@@ -12,7 +12,6 @@ const Login = () => {
     }
     useEffect(()=>{
         dispatchh({type:"new" , payload:"loginSignup"});
-        console.log(statee);
     },[])
     return (
         <div className={style.newBox}>
