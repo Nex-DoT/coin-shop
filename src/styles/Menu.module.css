@@ -123,33 +123,32 @@ p{
 .newmenu{
     border-radius: 0px 0px 5px 5px;
     position: absolute;
-    top: 0px;
+    top: -300px;
     width: 100%;
-    height: 400px;
+    height: 300px;
     background-color: #3b056ee0;
     z-index: 1000;
+    animation: showe 0.5s forwards;
     backdrop-filter: blur(5px);
-    animation: move2 1s forwards;
 }
-@keyframes move2 {
-    0%{top: 0px;}
-    100%{top: -500px;}
+@keyframes showe {
+    0%{opacity: 1; top: 0px;};
+    100%{opacity: 0;top: -300px; };
 }
 .newmenu2{
     border-radius: 0px 0px 5px 5px;
     position: absolute;
     top: 0px;
     width: 100%;
-    height: 400px;
+    height: 300px;
     background-color: #3b056ee0;
-    transform: 0.5s all;
     backdrop-filter: blur(5px);
     z-index: 1000;
-    animation: move 1s forwards;
+    animation: showa 0.5s forwards;
 }
-@keyframes move {
-    0%{top: -500px;}
-    100%{top: 0px;}
+@keyframes showa{
+    0%{opacity: 0;  top: -300px;};
+    100%{opacity:1 ; top: 0px;};
 }
 .newmenu .ul ,.newmenu2 .ul{
     position: absolute;
@@ -161,7 +160,7 @@ p{
     align-items: center;
     justify-content: space-around;
     flex-flow: column;
-    height: 350px;
+    height: 250px;
     list-style: none;
 
 }

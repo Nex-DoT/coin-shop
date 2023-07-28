@@ -2,12 +2,8 @@ import React, { useContext , lazy , Suspense } from 'react';
 import { Route , Routes , Navigate } from 'react-router-dom';
 //backgraound
 import BackGround from './backgraound/BackGround';
-import HomeBack from './backgraound/HomeBack';
-import Shop2Back from "./backgraound/Shop2Back";
-import ShopBack from "./backgraound/ShopBack";
 import PhoneBack from './backgraound/PhoneBack';
 //context
-import { backContext } from './context/Reducer';
 //style
 import style from "./styles/Box.module.css";
 //component
@@ -17,16 +13,14 @@ const Menu = lazy(()=> import ("./components/Menu"));
 const Shop = lazy(()=> import ("./components/SHOP/Shop"));
 const Cart = lazy(()=> import ("./components/CART/Cart"));
 const Home = lazy(()=> import ("./components/HOME/Home"));
-
 const App = () => {
-    const [statee , dispatchh ] = useContext(backContext)
+    const PhoneOrNot = ()=>{
+        return navigator.maxTouchPoints > 0 && /Android|iPhone/.test(navigator.userAgent) ;
+    }
+    const Data = PhoneOrNot();
     return (
         <div className={style.overflow}>
-            {statee.loginSignup && <BackGround/>}
-            {statee.cart && <HomeBack/>}
-            {statee.shop && <Shop2Back/>}
-            {statee.home && <ShopBack/>}
-            {statee.PhoneBack && <PhoneBack/>}
+            {Data ? <PhoneBack/> : <BackGround/>}
             <Menu></Menu>
             <div className={style.component}>
               <Suspense fallback={<div>Loading</div>}>

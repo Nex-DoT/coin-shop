@@ -2,7 +2,8 @@ import React,{useState , useEffect, useContext ,useTransition } from 'react';
 //component
 import CoinCart from './CoinCart';
 //icon 
-import { BsSearch } from "react-icons/bs";
+import { AiOutlineArrowLeft } from "react-icons/ai";
+import { AiOutlineArrowRight } from "react-icons/ai";
 //style 
 import style from "../../styles/Shop.module.css"
 //context
@@ -12,25 +13,40 @@ import { DataContext } from '../../context/DataCoinApi';
 //SHOP component
 const Shop = () => {
     //state
-    const [input , newInput] = useState("");
+    const [pagenumber , setPagenumber] = useState(1);
+    const [number1 , setNumber1 ] = useState(0);
+    const [number2 , setNumber2 ] = useState(25);
+    
     //context
     const [statee , dispatchh] = useContext(backContext);
     const [data,positive] = useContext(DataContext)
-    const keyUpHandeler = event => {
-        newInput(event.target.value);
-    }
-    const newData = data.filter(item=> item.name.toLowerCase().includes(input.toLowerCase()));
+    
     useEffect(()=>{
         dispatchh({type:"new" , payload:"shop"});
     },[])
+    const slicedData = data.slice( number1,number2);
+
+    const nextPage = ()=> {
+        setNumber1(prevNumber1 => prevNumber1 + 25);
+        setNumber2(prevNumber2 => prevNumber2 + 25);
+        setPagenumber(prevPageNumber => prevPageNumber + 1);
+    };    
+    const pervPage = ()=> {
+        setNumber1(prevNumber1 => prevNumber1 - 25);
+        setNumber2(prevNumber2 => prevNumber2 - 25);
+        setPagenumber(prevPageNumber => prevPageNumber - 1);
+    };    
     return (
         <div className={style.box}>
             {console.log(positive , data)}
-            <div className={style.inputdiv}>
-                <BsSearch className={style.icon}/>
-              <input className={style.input} placeholder='Search' type="text" onKeyUp={keyUpHandeler} />
+            
+          <div className={style.btnBoxShop}>
+                {pagenumber=== 1 ?<button><AiOutlineArrowLeft/></button> :<button onClick={pervPage}><AiOutlineArrowLeft/></button>}
+                  <h3>{pagenumber}</h3>
+                {number2 === 200 ? <button><AiOutlineArrowRight/></button> : <button onClick={nextPage}><AiOutlineArrowRight/></button>}
             </div>
-            {newData.map(item => <CoinCart key={item.id} data={item} />)}
+            
+            {slicedData.map(item => <CoinCart key={item.id} data={item} />)}
         </div>
     );
 };

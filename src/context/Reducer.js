@@ -1,8 +1,5 @@
 import React,{createContext , useReducer} from 'react';
-const PhoneOrNot = ()=>{
-    return navigator.maxTouchPoints > 0 && /Android|iPhone/.test(navigator.userAgent) ;
-}
-console.log(PhoneOrNot)
+
 const initialState = {
     cart: false,
     home: false ,
@@ -13,7 +10,7 @@ const initialState = {
 const reducerback = (statee , action)=>{
     switch(action.type){
         case "new" :
-            if(!PhoneOrNot()){
+         
                     let newsate={
                         cart: false,
                         home: false ,
@@ -24,17 +21,6 @@ const reducerback = (statee , action)=>{
                         return{
                             ...newsate,
                             [action.payload]:true
-            }}else{
-                let newsate={
-                    cart: false,
-                    home: false ,
-                    shop:false,
-                    PhoneBack : true,
-                    loginSignup: false,
-                };
-                return {
-                    ...newsate,
-                }
             }
     }
 }
