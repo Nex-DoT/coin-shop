@@ -1,4 +1,4 @@
-import React,{useState , useEffect, useContext ,useTransition } from 'react';
+import React,{useState , useEffect, useContext  } from 'react';
 //component
 import CoinCart from './CoinCart';
 //icon 
@@ -47,8 +47,14 @@ const Shop = () => {
     const cheangeHandeler = event =>{
         newInput(event.target.value);
     }
+    //close handelr
+    const closeHandeler = ()=>{
+        newInput("");
+        setSearchData(null)
+    }
     //Key Handeler for search   
         const keyUpHandeler = event => {
+            // const newData = data.filter(item=> item.name.toLowerCase().includes(input.toLowerCase()));
             const newData = data.filter(item=> item.name.toLowerCase().includes(input.toLowerCase()));
                 if(event.key === "Enter"){
                     setSearchData(newData);
@@ -57,11 +63,6 @@ const Shop = () => {
                     }
                 }
             }
-    //close handelr
-        const closeHandeler = ()=>{
-            newInput("");
-            setSearchData(null)
-        }
         //jsx
         return (
             <div className={style.box}>
@@ -79,7 +80,8 @@ const Shop = () => {
                             <h3>{pagenumber}</h3>
                             {number2 === 200 ? <button><AiOutlineArrowRight/></button> : <button onClick={nextPage}><AiOutlineArrowRight/></button>}
                         </div>}
-                 {searchData ? searchData.map(item => <CoinCart key={item.id} data={item} />) : slicedData.map(item => <CoinCart key={item.id} data={item} />)}
+                {/* //map content */}
+                    {searchData ? searchData.map(item => <CoinCart key={item.id} data={item} />) : slicedData.map(item => <CoinCart key={item.id} data={item} />)}
             </div>
         );
     };

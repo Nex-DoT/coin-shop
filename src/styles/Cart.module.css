@@ -1,7 +1,6 @@
 .scroll{
     overflow-y: scroll;
-    width: 70%;
-    height: 100%;
+    grid-area: c;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,11 +15,16 @@
     top: 55%;
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
-    display: flex;
-    align-items: start;
-    justify-content: space-around;
+    display: grid;
+    gap: 20px;
+    grid-template-areas: 
+    "p p p c c c c c c c c c"
+    "p p p c c c c c c c c c"
+    "f f f c c c c c c c c c"
+    "f f f c c c c c c c c c"
+    "f f f c c c c c c c c c"
+    ;
     animation: show 1s ease-out forwards;
-    flex-flow: wrap row;
     color: white;
     overflow: hidden;
 }
@@ -37,8 +41,7 @@
     100%{top: 55%; opacity: 1;}
 }
 .box1{
-    width: 300px;
-    height: 138px;
+    grid-area: p;
     display: flex;
     align-items: start;
     justify-content: space-between;
@@ -48,13 +51,7 @@
     border-radius: 20px;
 }
 .box3{
-    position: absolute;
-    top: 50%;
-    left: 1.5%;
-    transform: translateY(-50%) ;
-    width: 300px;
-    height: 428px;
-    margin-top: 50px;
+    grid-area: f;
     background-color:#4e4c7c6f ;
     display: flex;
     align-items: center;
@@ -67,7 +64,7 @@
     font-size: 14px;
 }
 .btn{
-    width: 260px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -146,10 +143,8 @@ table{
 }
 @media screen and (max-width:1500px){
     .scroll{
-        margin-top: 40px;
         overflow-y: scroll;
-        width: 80%;
-        height: 90%;
+        grid-area: c;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -158,18 +153,24 @@ table{
         border-radius: 20px 0 0 20px;
     }
     .box{
-        overflow-y: scroll;
         position: absolute;
-        width: 95%;
+        width: 80%;
         height: 80%;
         top: 55%;
         left: 50%;
         transform: translateY(-50%) translateX(-50%);
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
+        display: grid;
+        gap: 20px;
+        grid-template-areas: 
+        "f f f f f f f f f f f f"
+        "p p p c c c c c c c c c"
+        "g g g c c c c c c c c c"
+        "g g g c c c c c c c c c"
+        "g g g c c c c c c c c c"
+        ;
         animation: show 1s ease-out forwards;
         color: white;
+        overflow: hidden;
     }
     .newbox{
         flex-flow: row wrap;
@@ -180,14 +181,13 @@ table{
         justify-content: space-between;
     }
     .box3{
-        top: 1000px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 80%;
-        height: 250px;
-        align-items: center;
-        justify-content: center;
+        grid-area: f;
+        background-color:#4e4c7c6f ;
         display: flex;
+        align-items: center;
+        justify-content: space-around;
         flex-flow: column;
+        padding: 10px 0;
+        border-radius: 20px;
     }
 }
