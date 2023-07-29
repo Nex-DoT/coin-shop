@@ -22,8 +22,7 @@
     "p p p c c c c c c c c c"
     "f f f c c c c c c c c c"
     "f f f c c c c c c c c c"
-    "f f f c c c c c c c c c"
-    ;
+    "f f f c c c c c c c c c";
     animation: show 1s ease-out forwards;
     color: white;
     overflow: hidden;
@@ -166,8 +165,7 @@ table{
         "p p p c c c c c c c c c"
         "g g g c c c c c c c c c"
         "g g g c c c c c c c c c"
-        "g g g c c c c c c c c c"
-        ;
+        "g g g c c c c c c c c c";
         animation: show 1s ease-out forwards;
         color: white;
         overflow: hidden;
