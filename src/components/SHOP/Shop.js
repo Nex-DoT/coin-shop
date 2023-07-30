@@ -18,7 +18,7 @@ const Shop = () => {
     
     //state
     const [searchData , setSearchData] = useState();
-    const [input , newInput] = useState();
+    const [input , newInput] = useState("");
     const [pagenumber , setPagenumber] = useState(1);
         const [number1 , setNumber1 ] = useState(0);
         const [number2 , setNumber2 ] = useState(25);
@@ -50,7 +50,7 @@ const Shop = () => {
     //close handelr
     const closeHandeler = ()=>{
         newInput("");
-        setSearchData(null)
+        setSearchData("")
     }
     //Key Handeler for search   
         const keyUpHandeler = event => {
@@ -59,7 +59,7 @@ const Shop = () => {
                 if(event.key === "Enter"){
                     setSearchData(newData);
                     if(input===""){
-                        setSearchData(null);
+                        setSearchData("");
                     }
                 }
             }

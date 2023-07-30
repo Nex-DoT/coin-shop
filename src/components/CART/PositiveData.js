@@ -12,7 +12,8 @@ const PositiveData = () => {
                                             <div className={style.details}>
                                                 <p>{item.name}</p>
                                                 <p className={style.green}>{item.price_change_percentage_24h}%</p>
-                                                <Link className={style.link} to={"/shop"}>Coin List</Link>
+                                                <p><Link className={style.link} to={"/shop"}>Coin List</Link></p>
+                                                
                                             </div>
                                         </div>)}
         </div>
