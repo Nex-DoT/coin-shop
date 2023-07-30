@@ -12,7 +12,7 @@
 }
 .box10{
     /* position: absolute; */
-    width: 250px;
+    /* width: 250px; */
     background-color: #4e4c7c9f;
     padding: 10px 20px;
     border-radius: 5px;
@@ -49,6 +49,26 @@
         align-items: center;
         justify-content: space-around;
         flex-flow: row;
+        height: 100%;
+        width: 100%;
+    }
+    .box10{
+        /* position: absolute; */
+        /* width: 200px; */
+        background-color: #4e4c7c9f;
+        padding: 10px 20px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+@media screen and (max-width:800px){
+    .newDiv{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-flow: column;
         height: 100%;
         width: 100%;
     }

@@ -189,3 +189,53 @@ table{
         border-radius: 20px;
     }
 }
+@media screen and (max-width:800px){
+    .scroll{
+        overflow-y: scroll;
+        grid-area: c;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column;
+        background-color: #4e4c7c9f;
+        border-radius: 20px 0 0 20px;
+    }
+    .box{
+        position: absolute;
+        width: 80%;
+        height: 80%;
+        top: 55%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        display: grid;
+        gap: 20px;
+        grid-template-areas: 
+        "p p p"
+        "c c c"
+        "c c c"
+        "c c c"
+        "f f f"
+        ;
+        animation: show 1s ease-out forwards;
+        color: white;
+        overflow: hidden;
+    }
+    .newbox{
+        flex-flow: row wrap;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .box3{
+        grid-area: f;
+        background-color:#4e4c7c6f ;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-flow: column;
+        padding: 10px 0;
+        border-radius: 20px;
+    }
+}
