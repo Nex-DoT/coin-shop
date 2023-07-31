@@ -3,8 +3,6 @@ import { backContext } from '../../context/Reducer';
 //icon
 import { BsGithub } from "react-icons/bs";
 import { BsTelegram } from "react-icons/bs";
-import { BsCurrencyBitcoin } from "react-icons/bs";
-import { BsCartFill } from "react-icons/bs";
 //style
 import style from "./Home.module.css"
 const Home = () => {
@@ -69,6 +67,7 @@ const Home = () => {
                             <li>SPA (react-router-dom)</li>
                             <li>axios</li>
                             <li>CSS</li>
+                            <li>Grid</li>
                         </ul>
                         <br/>
                         </p>
