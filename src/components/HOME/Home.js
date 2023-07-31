@@ -60,6 +60,7 @@ const Home = () => {
                 </div>
                 <p>
                     This app is built for practice and as a sample project. The following components were used to build this app:
+                        </p>
                     <br/>
                     <br/>
                         <ul>
@@ -70,7 +71,6 @@ const Home = () => {
                             <li>Grid</li>
                         </ul>
                         <br/>
-                        </p>
             </div>
         </div>
     );
